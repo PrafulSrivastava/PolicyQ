@@ -106,8 +106,8 @@ export default function VoiceInputButton({
                 className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center 
                   font-bold border-2 transition-all shrink-0 mb-0.5
                   ${isListening
-                        ? 'bg-rose-500 border-rose-600 text-white animate-pulse'
-                        : 'bg-white border-gray-300 text-gray-500 hover:border-black hover:text-black shadow-offset-sm hover:shadow-brutal-sm'
+                        ? 'bg-rose-500 border-rose-600 text-white animate-pulse shadow-md'
+                        : 'bg-white border-gray-300 text-gray-500 hover:border-black hover:text-black shadow-sm hover:shadow-md'
                     } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
                 title={isListening ? "Stop listening" : "Start voice input"}
             >

@@ -10,7 +10,7 @@ export default function Header({ onClear }: HeaderProps) {
     return (
         <header className="fixed top-0 inset-x-0 z-50">
             {/* Main header content */}
-            <div className="bg-white border-b-3 border-black h-16">
+            <div className="bg-white border-b border-gray-200 h-16">
                 <div className="max-w-4xl mx-auto px-3 sm:px-4 h-full flex items-center justify-between">
                     {/* Logo & Title */}
                     <div className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -71,10 +71,10 @@ export default function Header({ onClear }: HeaderProps) {
                         <button
                             onClick={onClear}
                             className="px-2 sm:px-4 py-2 text-sm font-bold text-gray-700 
-                                     bg-white border-2 border-gray-300 rounded-xl
-                                     hover:bg-black hover:text-white hover:border-black
+                                     bg-white border border-gray-300 rounded-xl
+                                     hover:bg-gray-50
                                      transition-all flex items-center gap-1.5 sm:gap-2 group
-                                     shadow-offset-sm hover:shadow-brutal-sm"
+                                     shadow-sm hover:shadow-md"
                             title="Start fresh"
                         >
                             <TrashIcon size={16} dangerHover />

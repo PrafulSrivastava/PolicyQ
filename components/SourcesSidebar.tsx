@@ -32,11 +32,11 @@ export default function SourcesSidebar({ isOpen, onClose, sources }: SourcesSide
             <aside className={`
                 fixed z-50 bg-white border-black flex flex-col
                 /* Mobile (bottom sheet) */
-                bottom-0 left-0 right-0 h-[90vh] rounded-t-2xl border-t-3 border-l-0 border-r-0
+                bottom-0 left-0 right-0 h-[90vh] rounded-t-2xl border-t border-gray-200
                 shadow-2xl animate-slide-up
                 /* Desktop override (right panel) */
                 sm:bottom-auto sm:left-auto sm:right-0 sm:top-0
-                sm:w-[420px] sm:h-screen sm:rounded-none sm:border-t-0 sm:border-l-3
+                sm:w-[420px] sm:h-screen sm:rounded-none sm:border-t-0 sm:border-l border-gray-200
                 sm:animate-slide-left sm:animate-none
             `}>
 
@@ -47,10 +47,10 @@ export default function SourcesSidebar({ isOpen, onClose, sources }: SourcesSide
 
                 {/* Header */}
                 <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 
-                              border-b-3 border-black bg-white sticky top-0 z-10">
+                              border-b border-gray-200 bg-white sticky top-0 z-10">
                     <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 bg-black border-2 border-black 
-                                      rounded-xl flex items-center justify-center shadow-brutal-sm">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 bg-black border border-black 
+                                      rounded-xl flex items-center justify-center shadow-sm">
                             <FileDescriptionIcon size={16} color="white" />
                         </div>
                         <div>
@@ -62,11 +62,11 @@ export default function SourcesSidebar({ isOpen, onClose, sources }: SourcesSide
                     </div>
                     <button
                         onClick={onClose}
-                        className="w-9 h-9 sm:w-10 sm:h-10 bg-white hover:bg-black 
-                                 border-2 border-gray-300 hover:border-black
+                        className="w-9 h-9 sm:w-10 sm:h-10 bg-white hover:bg-gray-50 
+                                 border border-gray-300 
                                  rounded-xl flex items-center justify-center 
-                                 text-gray-500 hover:text-white transition-all
-                                 shadow-offset-sm hover:shadow-brutal-sm"
+                                 text-gray-500 transition-all
+                                 shadow-sm hover:shadow-md"
                         title="Close"
                     >
                         <XIcon size={16} />
@@ -95,9 +95,9 @@ export default function SourcesSidebar({ isOpen, onClose, sources }: SourcesSide
                                 <div
                                     key={idx}
                                     id={`source-${idx}`}
-                                    className="bg-white rounded-xl p-4 sm:p-5 border-2 border-gray-200 
+                                    className="bg-white rounded-xl p-4 sm:p-5 border border-gray-200 
                                               border-l-4 border-l-black
-                                              shadow-offset-sm hover:shadow-brutal-sm 
+                                              shadow-sm hover:shadow-md 
                                               hover:-translate-y-1 transition-all duration-200 
                                               group scroll-mt-20 animate-fade-in-up"
                                     style={{ animationDelay: `${idx * 0.05}s` }}
@@ -107,7 +107,7 @@ export default function SourcesSidebar({ isOpen, onClose, sources }: SourcesSide
                                         {/* Number Badge */}
                                         <div className="w-8 h-8 sm:w-9 sm:h-9 bg-black text-white rounded-lg 
                                                        flex items-center justify-center font-black text-sm
-                                                       border-2 border-black shadow-brutal-sm shrink-0">
+                                                       border border-black shadow-sm shrink-0">
                                             {idx + 1}
                                         </div>
 

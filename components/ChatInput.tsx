@@ -67,7 +67,7 @@ export default function ChatInput({
     };
 
     return (
-        <div className={`fixed bottom-0 left-0 bg-white border-t-3 border-black z-40 transition-all duration-300 ${isSidebarOpen ? 'right-0 sm:right-[420px]' : 'right-0'}`}>
+        <div className={`fixed bottom-0 left-0 bg-white border-t border-gray-200 z-40 transition-all duration-300 ${isSidebarOpen ? 'right-0 sm:right-[420px]' : 'right-0'}`}>
             <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-5">
 
                 {/* Suggested Questions (only if chat is empty) - DISABLED FOR NOW */}
@@ -99,9 +99,9 @@ export default function ChatInput({
                 {/* Main Input */}
                 <div className="relative">
                     <div className={`flex items-end gap-2 sm:gap-3 bg-white rounded-2xl p-1.5 sm:p-3
-                                  border-2 border-gray-300 
-                                  focus-within:border-black focus-within:border-2
-                                  focus-within:shadow-brutal-sm
+                                  border border-gray-200 
+                                  focus-within:border-black focus-within:ring-2 focus-within:ring-black/5
+                                  shadow-sm focus-within:shadow-md
                                   transition-all`}>
 
                         {/* Textarea */}
@@ -141,7 +141,7 @@ export default function ChatInput({
                             className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center 
                                       font-bold border-2 transition-all shrink-0 mb-0.5
                                       ${input.trim() && !loading
-                                    ? 'bg-black border-black text-white shadow-brutal-sm hover:-translate-y-0.5 active:translate-y-0'
+                                    ? 'bg-black border-black text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0'
                                     : 'bg-gray-100 border-gray-300 text-gray-400 cursor-not-allowed'
                                 }`}
                             title="Send"

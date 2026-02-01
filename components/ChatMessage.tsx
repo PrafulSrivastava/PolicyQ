@@ -41,8 +41,8 @@ export default function ChatMessage({ role, content, sources, timestamp, isError
                 </div>
 
                 {/* Avatar */}
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-black border-2 border-black 
-                              rounded-xl flex items-center justify-center shrink-0 shadow-brutal-sm">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-black border border-black 
+                               rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                     <UserIcon size={16} color="white" />
                 </div>
             </div>
@@ -54,10 +54,10 @@ export default function ChatMessage({ role, content, sources, timestamp, isError
         <div className={`flex items-start gap-2 sm:gap-3 mb-6 animate-slide-left ${isError ? 'opacity-90' : ''}`}>
             {/* AI Avatar */}
             <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 
-                          shadow-brutal-sm border-2
+                          shadow-sm border
                           ${isError
-                    ? 'bg-red-100 border-red-600'
-                    : 'bg-white border-black'}`}>
+                    ? 'bg-red-50 border-red-200'
+                    : 'bg-white border-gray-200'}`}>
                 <SparklesIcon size={16} color={isError ? '#DC2626' : 'black'} />
             </div>
 

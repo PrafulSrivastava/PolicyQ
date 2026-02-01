@@ -5,9 +5,9 @@ export default function TypingIndicator() {
     return (
         <div className="flex items-start gap-3 mb-6 animate-fade-in">
             {/* AI Avatar */}
-            <div className="w-10 h-10 bg-white border-2 border-black 
+            <div className="w-10 h-10 bg-white border border-gray-200 
                           rounded-xl flex items-center justify-center shrink-0 
-                          shadow-brutal-sm animate-pulse">
+                          shadow-sm animate-pulse">
                 <SparklesIcon size={18} color="black" />
             </div>
 

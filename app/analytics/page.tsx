@@ -86,7 +86,7 @@ export default function AnalyticsPage() {
                     </div>
                     <button
                         onClick={() => router.push('/')}
-                        className="self-start sm:self-end px-4 py-2 bg-white border-2 border-black rounded-xl font-bold shadow-offset-sm hover:shadow-brutal-sm hover:-translate-y-0.5 transition-all text-sm"
+                        className="self-start sm:self-end px-4 py-2 bg-white border border-gray-300 rounded-xl font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm"
                     >
                         Back to Chat
                     </button>
@@ -95,7 +95,7 @@ export default function AnalyticsPage() {
                 {/* Stats Cards */}
                 {stats ? (
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
-                        <div className="bg-white rounded-2xl border-2 border-black p-4 sm:p-6 shadow-brutal-sm">
+                        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 shadow-sm">
                             <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 sm:mb-2">
                                 Total Queries
                             </div>
@@ -104,7 +104,7 @@ export default function AnalyticsPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl border-2 border-black p-4 sm:p-6 shadow-brutal-sm">
+                        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 shadow-sm">
                             <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 sm:mb-2">
                                 Avg Length
                             </div>
@@ -113,7 +113,7 @@ export default function AnalyticsPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl border-2 border-black p-4 sm:p-6 shadow-brutal-sm">
+                        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 shadow-sm">
                             <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 sm:mb-2">
                                 Sessions
                             </div>
@@ -122,7 +122,7 @@ export default function AnalyticsPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl border-2 border-black p-4 sm:p-6 shadow-brutal-sm">
+                        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 shadow-sm">
                             <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 sm:mb-2">
                                 Voice
                             </div>
@@ -132,7 +132,7 @@ export default function AnalyticsPage() {
                         </div>
                     </div>
                 ) : (
-                    <div className="bg-white rounded-2xl border-2 border-black p-8 sm:p-12 text-center mb-8 sm:mb-12 shadow-brutal-sm">
+                    <div className="bg-white rounded-2xl border border-gray-200 p-8 sm:p-12 text-center mb-8 sm:mb-12 shadow-sm">
                         <p className="text-lg sm:text-xl font-bold text-gray-400">No queries tracked yet.</p>
                     </div>
                 )}
@@ -144,8 +144,8 @@ export default function AnalyticsPage() {
 
                 {/* --- MOBILE CARD VIEW --- */}
                 <div className="md:hidden">
-                    <div className="bg-white rounded-2xl border-2 border-black shadow-brutal-sm overflow-hidden">
-                        <div className="px-4 py-3 border-b-2 border-black bg-purple-50">
+                    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                        <div className="px-4 py-3 border-b border-gray-200 bg-gray-50">
                             <h2 className="text-base font-bold text-black">Recent Queries</h2>
                         </div>
 
@@ -161,7 +161,7 @@ export default function AnalyticsPage() {
 
                                         {/* Method + Length row */}
                                         <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-                                            <span className={`card-badge px-2.5 py-0.5 text-xs font-black rounded-full border-2 ${badgeClass(query.inputMethod || 'unknown')}`}>
+                                            <span className={`card-badge px-2.5 py-0.5 text-xs font-black rounded-full border ${badgeClass(query.inputMethod || 'unknown')}`}>
                                                 {query.inputMethod}
                                             </span>
                                             <span className="text-xs font-bold text-gray-400 font-mono">
@@ -181,8 +181,8 @@ export default function AnalyticsPage() {
 
                 {/* --- DESKTOP TABLE (unchanged) --- */}
                 <div className="hidden md:block">
-                    <div className="bg-white rounded-2xl border-2 border-black shadow-brutal-sm overflow-hidden">
-                        <div className="px-6 py-4 border-b-2 border-black bg-purple-50">
+                    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                        <div className="px-6 py-4 border-b border-gray-200 bg-gray-50">
                             <h2 className="text-xl font-bold text-black">
                                 Recent Queries
                             </h2>
@@ -190,7 +190,7 @@ export default function AnalyticsPage() {
 
                         <div className="overflow-x-auto">
                             <table className="w-full text-left">
-                                <thead className="bg-gray-100 border-b-2 border-black">
+                                <thead className="bg-gray-50 border-b border-gray-200">
                                     <tr>
                                         <th className="px-6 py-4 text-xs font-black text-gray-600 uppercase tracking-widest">
                                             Query
@@ -214,7 +214,7 @@ export default function AnalyticsPage() {
                                                     {query.queryText}
                                                 </td>
                                                 <td className="px-6 py-4">
-                                                    <span className={`px-3 py-1 text-xs font-black rounded-full border-2 ${badgeClass(query.inputMethod || 'unknown')}`}>
+                                                    <span className={`px-3 py-1 text-xs font-black rounded-full border ${badgeClass(query.inputMethod || 'unknown')}`}>
                                                         {query.inputMethod}
                                                     </span>
                                                 </td>

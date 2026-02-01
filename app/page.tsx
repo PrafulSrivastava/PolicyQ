@@ -156,27 +156,27 @@ export default function Home() {
                   {/* Feature Badges — flex-wrap added so they stack on very small screens */}
                   <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
                     <div className="text-center group">
-                      <div className="w-13 h-13 sm:w-14 sm:h-14 bg-white border-2 border-black 
+                      <div className="w-13 h-13 sm:w-14 sm:h-14 bg-white border border-gray-200 
                                     rounded-xl flex items-center justify-center mb-2 
-                                    mx-auto shadow-brutal-sm group-hover:bg-black
+                                    mx-auto shadow-sm group-hover:bg-gray-50
                                     transition-all" style={{ width: '52px', height: '52px' }}>
                         <ZapIcon size={22} className="group-hover:text-white" />
                       </div>
                       <div className="font-bold text-black text-sm">Your pace</div>
                     </div>
                     <div className="text-center group">
-                      <div className="bg-white border-2 border-black 
+                      <div className="bg-white border border-gray-200 
                                     rounded-xl flex items-center justify-center mb-2 
-                                    mx-auto shadow-brutal-sm group-hover:bg-black
+                                    mx-auto shadow-sm group-hover:bg-gray-50
                                     transition-all" style={{ width: '52px', height: '52px' }}>
                         <FileDescriptionIcon size={22} className="group-hover:text-white" />
                       </div>
                       <div className="font-bold text-black text-sm">Cited</div>
                     </div>
                     <div className="text-center group">
-                      <div className="bg-white border-2 border-black 
+                      <div className="bg-white border border-gray-200 
                                     rounded-xl flex items-center justify-center mb-2 
-                                    mx-auto shadow-brutal-sm group-hover:bg-black
+                                    mx-auto shadow-sm group-hover:bg-gray-50
                                     transition-all" style={{ width: '52px', height: '52px' }}>
                         <BrainIcon size={22} className="group-hover:text-white" />
                       </div>
